@@ -1,19 +1,7 @@
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Users, Leaf, Zap, ChevronLeft, ChevronRight, Phone, MessageCircle } from 'lucide-react'
+import { Users, Leaf, Zap, Phone, MessageCircle } from 'lucide-react'
 import { siteContent } from '../data/siteContent'
-
-// Real car image URLs sourced from Maruti/Hyundai/Tata/Kia official or press images
-const carImages = {
-  1: 'https://imgd.aeplcdn.com/664x374/n/cw/ec/45691/exterior-right-front-three-quarter-2.jpeg?q=80',  // Eresso
-  2: 'https://imgd.aeplcdn.com/664x374/n/cw/ec/23321/wagonr-exterior-right-front-three-quarter-3.jpeg?q=80', // WagonR
-  3: 'https://imgd.aeplcdn.com/664x374/n/cw/ec/44686/aura-exterior-right-front-three-quarter-27.jpeg?q=80', // Hyundai Aura
-  4: 'https://imgd.aeplcdn.com/664x374/n/cw/ec/44686/aura-exterior-right-front-three-quarter-5.jpeg?q=80',  // Hyundai Grand i10 (Prime SD placeholder)
-  5: 'https://imgd.aeplcdn.com/664x374/n/cw/ec/130591/tiago-nrg-exterior-right-front-three-quarter.jpeg?q=80', // Tata Xpress
-  6: 'https://imgd.aeplcdn.com/664x374/n/cw/ec/154303/dzire-exterior-right-front-three-quarter.jpeg?q=80', // Dzire
-  7: 'https://imgd.aeplcdn.com/664x374/n/cw/ec/115777/ertiga-exterior-right-front-three-quarter-3.jpeg?q=80', // Ertiga
-  8: 'https://imgd.aeplcdn.com/664x374/n/cw/ec/192177/carens-exterior-right-front-three-quarter-2.jpeg?q=80', // Kia Carens
-}
 
 const categoryColors = {
   Hatchback: 'bg-blue-500/20 text-blue-300 border-blue-500/30',
@@ -42,7 +30,7 @@ function FleetCard({ car, index }) {
       <div className="relative overflow-hidden bg-steel-100 h-48">
         {!imgError ? (
           <img
-            src={carImages[car.id]}
+            src={car.image}
             alt={car.name}
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
             onError={() => setImgError(true)}
@@ -59,11 +47,6 @@ function FleetCard({ car, index }) {
           <span className={`font-heading font-semibold text-[10px] tracking-widest uppercase px-2 py-1 border ${categoryColors[car.category] || 'bg-steel-800/80 text-white border-steel-600'} backdrop-blur-sm`}>
             {car.category}
           </span>
-        </div>
-        {/* Fuel badge */}
-        <div className="absolute top-3 right-3 flex items-center gap-1 bg-green-600/90 backdrop-blur-sm px-2 py-1">
-          <Leaf size={10} className="text-white" />
-          <span className="font-heading font-semibold text-[10px] tracking-wider text-white uppercase">CNG + Petrol</span>
         </div>
       </div>
 
