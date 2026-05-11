@@ -107,10 +107,10 @@ export default function Hero() {
               <a
                 href={`https://wa.me/${brand.whatsapp}?text=Hi, I am interested in joining Rush Fleet as a driver`}
                 target="_blank" rel="noopener noreferrer"
-                className="flex items-center gap-3 bg-white/70 backdrop-blur-sm text-amber-600 font-heading font-bold tracking-widest uppercase px-8 py-4 text-sm rounded-2xl
-                           border border-amber-200 shadow-md
-                           transition-all duration-200 hover:-translate-y-1 hover:bg-amber-50 hover:border-amber-300 hover:shadow-lg
-                           active:translate-y-0 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-2"
+                className="flex items-center gap-3 bg-orange-400/20 backdrop-blur-sm text-orange-600 font-heading font-bold tracking-widest uppercase px-8 py-4 text-sm rounded-2xl
+                           border border-orange-400/50 shadow-sm shadow-orange-300/30
+                           transition-all duration-200 hover:-translate-y-1 hover:bg-orange-400/30 hover:border-orange-400 hover:shadow-md hover:shadow-orange-300/40
+                           active:translate-y-0 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2"
               >
                 <Shield size={16} strokeWidth={2.5} />
                 {hero.ctaDriver}

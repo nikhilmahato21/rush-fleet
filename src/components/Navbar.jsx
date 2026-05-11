@@ -87,8 +87,9 @@ export default function Navbar() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 font-heading font-bold text-sm tracking-widest uppercase px-5 py-2.5 rounded-xl
-                           bg-green-500 text-white shadow-md shadow-green-400/40
-                           transition-all duration-200 hover:-translate-y-0.5 hover:bg-green-400 hover:shadow-lg hover:shadow-green-400/50"
+                           bg-orange-400/20 backdrop-blur-sm border border-orange-400/50 text-orange-600
+                           shadow-sm shadow-orange-300/30
+                           transition-all duration-200 hover:-translate-y-0.5 hover:bg-orange-400/30 hover:border-orange-400 hover:shadow-md hover:shadow-orange-300/40"
               >
                 <Car size={15} strokeWidth={2.5} />
                 Join as Driver
@@ -141,7 +142,7 @@ export default function Navbar() {
                   href={`https://wa.me/${siteContent.brand.whatsapp}?text=Hi, I am interested in joining Rush Fleet as a driver`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 w-full bg-green-500 text-white font-heading font-bold tracking-widest uppercase py-3 px-4 rounded-xl shadow-md shadow-green-400/30 hover:bg-green-400 transition-colors"
+                  className="flex items-center justify-center gap-2 w-full bg-orange-400/20 backdrop-blur-sm border border-orange-400/50 text-orange-600 font-heading font-bold tracking-widest uppercase py-3 px-4 rounded-xl hover:bg-orange-400/30 hover:border-orange-400 transition-all duration-200"
                 >
                   <Car size={16} strokeWidth={2.5} />
                   Join as Driver
