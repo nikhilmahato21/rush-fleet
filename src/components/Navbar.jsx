@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Phone, Menu, X } from 'lucide-react'
+import { Phone, Menu, X, Car } from 'lucide-react'
 import { siteContent } from '../data/siteContent'
 
 const navLinks = [
@@ -86,9 +86,11 @@ export default function Navbar() {
                 href={`https://wa.me/${siteContent.brand.whatsapp}?text=Hi, I am interested in joining Rush Fleet as a driver`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-heading font-bold text-sm tracking-widest uppercase px-4 py-2.5 rounded-xl border border-amber-400 text-amber-600
-                           transition-all duration-200 hover:-translate-y-0.5 hover:bg-amber-500 hover:text-white hover:border-amber-500"
+                className="flex items-center gap-2 font-heading font-bold text-sm tracking-widest uppercase px-5 py-2.5 rounded-xl
+                           bg-green-500 text-white shadow-md shadow-green-400/40
+                           transition-all duration-200 hover:-translate-y-0.5 hover:bg-green-400 hover:shadow-lg hover:shadow-green-400/50"
               >
+                <Car size={15} strokeWidth={2.5} />
                 Join as Driver
               </a>
               <a
@@ -139,8 +141,9 @@ export default function Navbar() {
                   href={`https://wa.me/${siteContent.brand.whatsapp}?text=Hi, I am interested in joining Rush Fleet as a driver`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 w-full border border-amber-400 text-amber-600 font-heading font-bold tracking-widest uppercase py-3 px-4 rounded-xl hover:bg-amber-50 transition-colors"
+                  className="flex items-center justify-center gap-2 w-full bg-green-500 text-white font-heading font-bold tracking-widest uppercase py-3 px-4 rounded-xl shadow-md shadow-green-400/30 hover:bg-green-400 transition-colors"
                 >
+                  <Car size={16} strokeWidth={2.5} />
                   Join as Driver
                 </a>
                 <a href={`tel:${siteContent.brand.phone}`} className="flex items-center justify-center gap-2 w-full bg-amber-500 text-white font-heading font-bold tracking-widest uppercase py-3 px-4 rounded-xl shadow-md">
