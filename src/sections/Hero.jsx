@@ -78,6 +78,13 @@ export default function Hero() {
                 <MessageCircle size={16} strokeWidth={2.5} />
                 {hero.ctaSecondary}
               </a>
+              <a href={`https://wa.me/${brand.whatsapp}?text=Hi, I am interested in joining Rush Fleet as a driver`} target="_blank" rel="noopener noreferrer"
+                className="flex items-center gap-3 bg-transparent text-amber-400 font-heading font-bold tracking-widest uppercase px-8 py-4 text-sm
+                           border-2 border-amber-500/40 transition-all duration-200 hover:-translate-y-0.5 hover:border-amber-400 hover:bg-amber-500/10
+                           active:translate-y-0 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 focus:ring-offset-steel-950">
+                <Shield size={16} strokeWidth={2.5} />
+                {hero.ctaDriver}
+              </a>
             </motion.div>
 
             <motion.div custom={6} variants={fadeUp} initial="hidden" animate="show" className="flex flex-wrap items-center gap-6 mt-10 pt-8 border-t border-steel-800">

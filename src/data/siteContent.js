@@ -19,6 +19,7 @@ export const siteContent = {
     description: 'Choose from 8 premium CNG + Petrol vehicles — compact city cars to spacious MPVs. Based in Nagarbhavi & Vijaynagar, serving all of Bangalore.',
     ctaPrimary: 'Book Now',
     ctaSecondary: 'WhatsApp Us',
+    ctaDriver: 'Join as Driver',
     badge: 'CNG + Petrol Fleet',
   },
 
