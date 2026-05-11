@@ -16,19 +16,18 @@ export default function ServiceCard({ service, index }) {
       transition={{ delay: index * 0.1, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
       onHoverStart={() => setHovered(true)}
       onHoverEnd={() => setHovered(false)}
-      className="bg-white border border-steel-200 overflow-hidden group cursor-default
-                 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-steel-900/10 hover:border-amber-400"
+      className="bg-white/70 backdrop-blur-md border border-white/80 rounded-2xl shadow-md overflow-hidden group cursor-default
+                 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-amber-200/50 hover:border-amber-300"
     >
-      {/* Top accent */}
-      <div className="h-1 bg-steel-100 group-hover:bg-amber-500 transition-colors duration-300" />
+      {/* Top gradient accent */}
+      <div className="h-1 bg-gradient-to-r from-transparent via-amber-300/50 to-transparent group-hover:via-amber-500 transition-colors duration-300" />
 
       <div className="p-8">
-        {/* Icon */}
         <div className="flex items-start justify-between mb-6">
-          <div className={`w-14 h-14 flex items-center justify-center transition-colors duration-300 ${
-            hovered ? 'bg-amber-500' : 'bg-steel-950'
+          <div className={`w-14 h-14 flex items-center justify-center rounded-2xl transition-all duration-300 ${
+            hovered ? 'bg-amber-500 shadow-lg shadow-amber-300/50' : 'bg-amber-50 border border-amber-200'
           }`}>
-            <Icon size={24} className={hovered ? 'text-steel-950' : 'text-amber-400'} strokeWidth={2} />
+            <Icon size={24} className={hovered ? 'text-white' : 'text-amber-600'} strokeWidth={2} />
           </div>
           <motion.div
             animate={{ x: hovered ? 0 : 8, opacity: hovered ? 1 : 0 }}
@@ -38,18 +37,16 @@ export default function ServiceCard({ service, index }) {
           </motion.div>
         </div>
 
-        {/* Text */}
         <p className="font-heading font-semibold text-[10px] tracking-[0.3em] text-amber-600 uppercase mb-1">
           {service.subtitle}
         </p>
-        <h3 className="font-display text-3xl text-steel-950 leading-none tracking-wide mb-3">
+        <h3 className="font-display text-3xl text-steel-900 leading-none tracking-wide mb-3">
           {service.title}
         </h3>
         <p className="font-body text-sm text-steel-500 leading-relaxed mb-6">
           {service.description}
         </p>
 
-        {/* Features */}
         <ul className="space-y-2 mb-6">
           {service.features.map(f => (
             <li key={f} className="flex items-center gap-2">
@@ -59,11 +56,9 @@ export default function ServiceCard({ service, index }) {
           ))}
         </ul>
 
-        {/* Price */}
-        <div className="pt-4 border-t border-steel-100 flex items-center justify-between">
-          <span className="font-heading font-bold text-sm tracking-wider text-steel-950">{service.price}</span>
+        <div className="pt-4 border-t border-steel-100 flex items-center justify-end">
           <motion.a
-            href="tel:7003384410"
+            href="tel:7996999197"
             className="font-heading font-bold text-xs tracking-widest text-amber-600 uppercase hover:text-amber-500 transition-colors flex items-center gap-1"
             whileHover={{ x: 3 }}
           >

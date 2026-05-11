@@ -47,7 +47,9 @@ export default function Navbar() {
         animate={{ y: 0 }}
         transition={{ duration: 0.5, ease: 'easeOut' }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled ? 'bg-white/95 backdrop-blur-md shadow-md border-b border-steel-200' : 'bg-transparent'
+          scrolled
+            ? 'bg-white/95 backdrop-blur-md shadow-md border-b border-steel-200'
+            : 'bg-white/50 backdrop-blur-md border-b border-white/60'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -68,7 +70,7 @@ export default function Navbar() {
                   className={`font-heading font-semibold text-sm tracking-widest uppercase transition-all duration-200 relative group ${
                     scrolled
                       ? active === link.href.replace('#', '') ? 'text-amber-500' : 'text-steel-700 hover:text-steel-950'
-                      : active === link.href.replace('#', '') ? 'text-amber-400' : 'text-white/70 hover:text-white'
+                      : active === link.href.replace('#', '') ? 'text-amber-500' : 'text-steel-600 hover:text-steel-900'
                   }`}
                 >
                   {link.label}
@@ -84,17 +86,15 @@ export default function Navbar() {
                 href={`https://wa.me/${siteContent.brand.whatsapp}?text=Hi, I am interested in joining Rush Fleet as a driver`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`font-heading font-bold text-sm tracking-widest uppercase px-4 py-2.5 border transition-all duration-200 hover:-translate-y-0.5 ${
-                  scrolled
-                    ? 'border-amber-500 text-amber-600 hover:bg-amber-500 hover:text-steel-950'
-                    : 'border-amber-500/60 text-amber-400 hover:border-amber-400 hover:bg-amber-500/10'
-                }`}
+                className="font-heading font-bold text-sm tracking-widest uppercase px-4 py-2.5 rounded-xl border border-amber-400 text-amber-600
+                           transition-all duration-200 hover:-translate-y-0.5 hover:bg-amber-500 hover:text-white hover:border-amber-500"
               >
                 Join as Driver
               </a>
               <a
                 href={`tel:${siteContent.brand.phone}`}
-                className="flex items-center gap-2 font-heading font-bold text-sm tracking-widest bg-amber-500 text-steel-950 px-5 py-2.5 hover:bg-amber-400 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-amber-500/30"
+                className="flex items-center gap-2 font-heading font-bold text-sm tracking-widest bg-amber-500 text-white px-5 py-2.5 rounded-xl
+                           shadow-md shadow-amber-300/40 hover:bg-amber-400 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-amber-400/50"
               >
                 <Phone size={14} strokeWidth={2.5} />
                 {siteContent.brand.phone}
@@ -119,7 +119,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.2 }}
-            className="fixed top-16 left-0 right-0 z-40 bg-white border-b-2 border-amber-500 shadow-2xl md:hidden"
+            className="fixed top-16 left-0 right-0 z-40 bg-white/90 backdrop-blur-xl border-b border-amber-200 shadow-2xl md:hidden"
           >
             <div className="px-4 py-6 space-y-1">
               {navLinks.map((link, i) => (
@@ -139,11 +139,11 @@ export default function Navbar() {
                   href={`https://wa.me/${siteContent.brand.whatsapp}?text=Hi, I am interested in joining Rush Fleet as a driver`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 w-full border-2 border-amber-500 text-amber-600 font-heading font-bold tracking-widest uppercase py-3 px-4"
+                  className="flex items-center justify-center gap-2 w-full border border-amber-400 text-amber-600 font-heading font-bold tracking-widest uppercase py-3 px-4 rounded-xl hover:bg-amber-50 transition-colors"
                 >
                   Join as Driver
                 </a>
-                <a href={`tel:${siteContent.brand.phone}`} className="flex items-center justify-center gap-2 w-full bg-amber-500 text-steel-950 font-heading font-bold tracking-widest uppercase py-3 px-4">
+                <a href={`tel:${siteContent.brand.phone}`} className="flex items-center justify-center gap-2 w-full bg-amber-500 text-white font-heading font-bold tracking-widest uppercase py-3 px-4 rounded-xl shadow-md">
                   <Phone size={16} />
                   Call: {siteContent.brand.phone}
                 </a>

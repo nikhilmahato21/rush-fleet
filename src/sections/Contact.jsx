@@ -7,9 +7,9 @@ function FloatingInput({ label, id, type = 'text', value, onChange, error, requi
   const [focused, setFocused] = useState(false)
   const isUp = focused || value
 
-  const classes = `w-full bg-steel-50 border-2 px-4 pt-6 pb-2 font-body text-sm text-steel-900
-                   transition-colors duration-200 focus:outline-none resize-none
-                   ${error ? 'border-red-400 focus:border-red-500' : isUp ? 'border-amber-500' : 'border-steel-200 focus:border-amber-500'}`
+  const classes = `w-full bg-white/70 border-2 px-4 pt-6 pb-2 font-body text-sm text-steel-900 rounded-xl
+                   transition-colors duration-200 focus:outline-none resize-none backdrop-blur-sm
+                   ${error ? 'border-red-400 focus:border-red-500' : isUp ? 'border-amber-400' : 'border-steel-200 focus:border-amber-400'}`
 
   return (
     <div className="relative">
@@ -54,7 +54,6 @@ export default function Contact({ onToast }) {
       `Name: ${form.name.trim()}`,
       `Phone: ${form.phone.trim()}`,
     ]
-
     if (form.carChoice.trim()) lines.push(`Preferred Car: ${form.carChoice.trim()}`)
     lines.push(`Trip Details: ${form.message.trim()}`)
 
@@ -66,53 +65,57 @@ export default function Contact({ onToast }) {
   }
 
   return (
-    <section id="contact" className="py-24 bg-white" aria-label="Contact us">
+    <section id="contact" className="py-24 bg-gradient-to-br from-amber-50 via-white to-sky-50 overflow-hidden" aria-label="Contact us">
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
         <div className="mb-16">
-          <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="section-label mb-3">
+          <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
+            className="font-heading font-semibold text-xs tracking-[0.35em] text-amber-600 uppercase mb-3">
             Get In Touch
           </motion.p>
-          <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="section-title mb-4">
-            BOOK YOUR<br /><span className="text-stroke">RIDE NOW</span>
+          <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
+            transition={{ delay: 0.1 }} className="font-display text-6xl md:text-7xl text-steel-900 leading-none tracking-wide mb-4">
+            BOOK YOUR<br /><span className="text-amber-500">RIDE NOW</span>
           </motion.h2>
-          <div className="divider-amber" />
+          <div className="w-16 h-1 bg-amber-500 rounded-full" />
         </div>
 
         <div className="grid lg:grid-cols-2 gap-16">
+
+          {/* Left — contact info */}
           <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
-            {/* Phone BIG */}
-            <div className="bg-steel-950 p-8 mb-4 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 diagonal-stripe opacity-30" />
-              <p className="font-heading font-semibold text-xs tracking-[0.35em] text-amber-500 uppercase mb-2">Call or WhatsApp</p>
-              <a href={`tel:${contact.phone}`} className="block font-display text-6xl text-white hover:text-amber-400 transition-colors duration-200 leading-none tracking-wide">
+            {/* Phone card */}
+            <div className="bg-white/60 backdrop-blur-xl border border-white/80 shadow-xl p-8 mb-4 rounded-3xl">
+              <p className="font-heading font-semibold text-xs tracking-[0.35em] text-amber-600 uppercase mb-2">Call or WhatsApp</p>
+              <a href={`tel:${contact.phone}`}
+                className="block font-display text-6xl text-steel-900 hover:text-amber-500 transition-colors duration-200 leading-none tracking-wide">
                 {contact.phone}
               </a>
             </div>
 
             {/* Location cards */}
             <div className="grid grid-cols-2 gap-4 mb-4">
-              <div className="bg-amber-500 p-6">
+              <div className="bg-amber-400/90 backdrop-blur-sm p-6 rounded-2xl shadow-md shadow-amber-300/30">
                 <div className="flex items-center gap-2 mb-2">
-                  <MapPin size={14} className="text-steel-950" strokeWidth={2.5} />
-                  <p className="font-heading font-semibold text-[10px] tracking-widest text-steel-950/60 uppercase">Parking</p>
+                  <MapPin size={14} className="text-amber-950" strokeWidth={2.5} />
+                  <p className="font-heading font-semibold text-[10px] tracking-widest text-amber-950/60 uppercase">Parking</p>
                 </div>
-                <p className="font-display text-4xl text-steel-950 leading-none tracking-wide">VIJAY</p>
-                <p className="font-display text-4xl text-steel-950 leading-none tracking-wide">NAGAR</p>
-                <p className="font-heading text-[10px] tracking-widest text-steel-950/60 uppercase mt-2">Bangalore</p>
+                <p className="font-display text-4xl text-amber-950 leading-none tracking-wide">VIJAY</p>
+                <p className="font-display text-4xl text-amber-950 leading-none tracking-wide">NAGAR</p>
+                <p className="font-heading text-[10px] tracking-widest text-amber-950/60 uppercase mt-2">Bangalore</p>
               </div>
-              <div className="bg-steel-950 p-6 border border-steel-800">
+              <div className="bg-white/60 backdrop-blur-xl border border-white/80 shadow-md p-6 rounded-2xl">
                 <div className="flex items-center gap-2 mb-2">
                   <Building size={14} className="text-amber-500" strokeWidth={2.5} />
-                  <p className="font-heading font-semibold text-[10px] tracking-widest text-amber-500/60 uppercase">Office</p>
+                  <p className="font-heading font-semibold text-[10px] tracking-widest text-amber-600 uppercase">Office</p>
                 </div>
-                <p className="font-display text-3xl text-white leading-none tracking-wide">NAGAR</p>
-                <p className="font-display text-3xl text-amber-400 leading-none tracking-wide">BHAVI</p>
-                <p className="font-heading text-[10px] tracking-widest text-steel-500 uppercase mt-2">2nd Stage</p>
+                <p className="font-display text-3xl text-steel-800 leading-none tracking-wide">NAGAR</p>
+                <p className="font-display text-3xl text-amber-500 leading-none tracking-wide">BHAVI</p>
+                <p className="font-heading text-[10px] tracking-widest text-steel-400 uppercase mt-2">2nd Stage</p>
               </div>
             </div>
 
             {/* Full address */}
-            <div className="border border-steel-200 p-5 mb-4">
+            <div className="bg-white/60 backdrop-blur-xl border border-white/80 shadow-md rounded-2xl p-5 mb-4">
               <p className="font-heading font-semibold text-[10px] tracking-widest text-amber-600 uppercase mb-2">Full Address</p>
               <p className="font-body text-sm text-steel-700 leading-relaxed">
                 No 11, 20th Cross, Malgala<br />
@@ -121,7 +124,7 @@ export default function Contact({ onToast }) {
               </p>
             </div>
 
-            <div className="flex items-center gap-3 p-4 border border-steel-200 mb-4">
+            <div className="flex items-center gap-3 bg-white/60 backdrop-blur-xl border border-white/80 shadow-sm rounded-2xl p-4 mb-4">
               <Clock size={16} className="text-amber-500 flex-shrink-0" strokeWidth={2} />
               <div>
                 <div className="font-heading font-semibold text-[10px] tracking-widest text-steel-400 uppercase">Hours</div>
@@ -130,25 +133,26 @@ export default function Contact({ onToast }) {
             </div>
 
             <a href={`https://wa.me/${brand.whatsapp}?text=Hi, I want to book a car rental`} target="_blank" rel="noopener noreferrer"
-              className="flex items-center justify-center gap-3 w-full bg-green-500 text-white font-heading font-bold tracking-widest uppercase py-5 text-sm
-                         transition-all duration-200 hover:-translate-y-0.5 hover:shadow-2xl hover:shadow-green-500/30 hover:bg-green-400">
+              className="flex items-center justify-center gap-3 w-full bg-white/70 backdrop-blur-sm text-green-700 font-heading font-bold tracking-widest uppercase py-5 text-sm rounded-2xl
+                         border border-green-200 shadow-md transition-all duration-200 hover:-translate-y-1 hover:bg-green-50 hover:border-green-300 hover:shadow-lg">
               <MessageCircle size={20} strokeWidth={2.5} />
               Chat on WhatsApp
             </a>
           </motion.div>
 
+          {/* Right — form */}
           <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
-            <div className="bg-steel-50 border border-steel-200 p-8">
-              <h3 className="font-display text-3xl text-steel-950 tracking-wide mb-2">REQUEST A BOOKING</h3>
+            <div className="bg-white/60 backdrop-blur-xl border border-white/80 shadow-xl rounded-3xl p-8">
+              <h3 className="font-display text-3xl text-steel-900 tracking-wide mb-2">REQUEST A BOOKING</h3>
               <p className="font-body text-xs text-steel-500 mb-6">Fill in the form and continue your enquiry on WhatsApp.</p>
 
               {submitted ? (
                 <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }}
                   className="flex flex-col items-center justify-center py-16 gap-4">
-                  <div className="w-16 h-16 bg-green-500 flex items-center justify-center">
+                  <div className="w-16 h-16 bg-green-500 rounded-2xl flex items-center justify-center shadow-lg shadow-green-300/50">
                     <Check size={32} className="text-white" strokeWidth={3} />
                   </div>
-                  <p className="font-display text-3xl text-steel-950 tracking-wide text-center">WHATSAPP OPENED!</p>
+                  <p className="font-display text-3xl text-steel-900 tracking-wide text-center">WHATSAPP OPENED!</p>
                   <p className="font-body text-sm text-steel-500 text-center">Send the prefilled message to complete your enquiry.</p>
                 </motion.div>
               ) : (
@@ -159,10 +163,11 @@ export default function Contact({ onToast }) {
                   <FloatingInput id="message" label="Trip Details" as="textarea" rows={4} required value={form.message} onChange={e => setForm({ ...form, message: e.target.value })} error={errors.message} />
 
                   <button type="submit"
-                    className="w-full flex items-center justify-center gap-3 bg-steel-950 text-white font-heading font-bold tracking-widest uppercase py-5 text-sm
-                               transition-all duration-200 hover:-translate-y-0.5 hover:bg-steel-800 hover:shadow-xl
-                               focus:outline-none focus:ring-2 focus:ring-steel-950 focus:ring-offset-2">
-                    <><Send size={16} strokeWidth={2.5} />Send Enquiry on WhatsApp</>
+                    className="w-full flex items-center justify-center gap-3 bg-amber-500 text-white font-heading font-bold tracking-widest uppercase py-5 text-sm rounded-2xl
+                               shadow-lg shadow-amber-400/40 transition-all duration-200 hover:-translate-y-1 hover:bg-amber-400 hover:shadow-xl
+                               focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2">
+                    <Send size={16} strokeWidth={2.5} />
+                    Send Enquiry on WhatsApp
                   </button>
                 </form>
               )}
