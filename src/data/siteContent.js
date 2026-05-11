@@ -1,7 +1,7 @@
 export const siteContent = {
   brand: {
     name: 'RUSH',
-    tagline: 'FLEET RENTALS',
+    tagline: 'smart fleets .smarter cities',
     phone: '7996999197',
     whatsapp: '917996999197',
     email: 'info@rushfleet.in',

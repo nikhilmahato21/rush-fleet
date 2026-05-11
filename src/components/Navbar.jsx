@@ -52,16 +52,12 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex items-center justify-between h-16 md:h-20">
-            <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="focus:outline-none group">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-steel-950 flex items-center justify-center group-hover:bg-amber-500 transition-colors duration-200">
-                  <span className="font-display text-amber-400 text-xl group-hover:text-steel-950 transition-colors duration-200">R</span>
-                </div>
-                <div>
-                  <div className="font-display text-2xl text-steel-950 leading-none tracking-widest">{siteContent.brand.name}</div>
-                  <div className="font-heading text-[9px] tracking-[0.35em] text-steel-500 uppercase leading-none">{siteContent.brand.tagline}</div>
-                </div>
-              </div>
+            <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="focus:outline-none" aria-label="Go to top">
+              <img
+                src="/logo.png"
+                alt="Rush Fleet"
+                className={`h-20 w-auto transition-all duration-300 `}
+              />
             </button>
 
             <div className="hidden md:flex items-center gap-8">
@@ -70,7 +66,9 @@ export default function Navbar() {
                   key={link.href}
                   onClick={() => handleNav(link.href)}
                   className={`font-heading font-semibold text-sm tracking-widest uppercase transition-all duration-200 relative group ${
-                    active === link.href.replace('#', '') ? 'text-amber-600' : 'text-steel-700 hover:text-steel-950'
+                    scrolled
+                      ? active === link.href.replace('#', '') ? 'text-amber-500' : 'text-steel-700 hover:text-steel-950'
+                      : active === link.href.replace('#', '') ? 'text-amber-400' : 'text-white/70 hover:text-white'
                   }`}
                 >
                   {link.label}

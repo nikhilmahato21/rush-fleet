@@ -14,13 +14,13 @@
 
   body {
     font-family: 'DM Sans', sans-serif;
-    background-color: #f4f6f8;
-    color: #1a2027;
+    background-color: #f0f4fb;
+    color: #080f28;
   }
 
   ::selection {
-    background: #f59e0b;
-    color: #1a2027;
+    background: #1a6dd4;
+    color: #ffffff;
   }
 }
 
@@ -76,8 +76,8 @@
 
   .grid-texture {
     background-image:
-      linear-gradient(rgba(26,32,39,0.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(26,32,39,0.04) 1px, transparent 1px);
+      linear-gradient(rgba(8,15,40,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(8,15,40,0.05) 1px, transparent 1px);
     background-size: 40px 40px;
   }
 
@@ -86,8 +86,8 @@
       -45deg,
       transparent,
       transparent 4px,
-      rgba(245,158,11,0.15) 4px,
-      rgba(245,158,11,0.15) 8px
+      rgba(26,109,212,0.15) 4px,
+      rgba(26,109,212,0.15) 8px
     );
   }
 }
@@ -100,10 +100,10 @@
   background: #e4e9ed;
 }
 ::-webkit-scrollbar-thumb {
-  background: #f59e0b;
+  background: #1a6dd4;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #d97706;
+  background: #145cb8;
 }
 
 /* Reduced motion */

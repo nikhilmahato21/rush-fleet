@@ -11,14 +11,8 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 sm:px-8 py-16">
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           <div>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 bg-amber-500 flex items-center justify-center">
-                <span className="font-display text-steel-950 text-2xl">R</span>
-              </div>
-              <div>
-                <div className="font-display text-3xl text-white leading-none tracking-widest">{brand.name}</div>
-                <div className="font-heading text-[9px] tracking-[0.35em] text-steel-500 uppercase">{brand.tagline}</div>
-              </div>
+            <div className="mb-4">
+              <img src="/logo.png" alt="Rush Fleet" className="h-14 w-auto brightness-0 invert" />
             </div>
             <p className="font-body text-sm text-steel-400 leading-relaxed mb-6">{footer.tagline}</p>
             <div className="flex gap-3">
