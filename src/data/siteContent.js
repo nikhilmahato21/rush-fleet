@@ -16,7 +16,7 @@ export const siteContent = {
   hero: {
     headline: 'DRIVE THE RUSH',
     subheadline: "BANGALORE'S FLEET RENTAL",
-    description: 'Choose from 8 premium CNG + Petrol vehicles — compact city cars to spacious MPVs. Based in Nagarbhavi & Vijaynagar, serving all of Bangalore.',
+    description: 'Choose from 500+ premium CNG + Petrol vehicles — compact city cars to spacious MPVs. Based in Nagarbhavi & Vijaynagar, serving all of Bangalore.',
     ctaPrimary: 'Book Now',
     ctaSecondary: 'WhatsApp Us',
     ctaDriver: 'Join as Driver',
@@ -24,7 +24,7 @@ export const siteContent = {
   },
 
   stats: [
-    { value: '8+', label: 'Vehicles' },
+    { value: '500+', label: 'Vehicles' },
     { value: 'CNG', label: 'Eco Fuel' },
     { value: '24/7', label: 'Available' },
     { value: '100%', label: 'AC Fleet' },
