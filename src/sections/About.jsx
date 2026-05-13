@@ -26,7 +26,7 @@ export default function About() {
 
               <div className="grid grid-cols-2 gap-3">
                 {[
-                  { label: 'Cars', value: '8 Cars' },
+                  { label: 'Cars', value: '500+' },
                   { label: 'Fuel', value: 'CNG+PTR' },
                   { label: 'Max Seats', value: '7 Seats' },
                   { label: 'Condition', value: 'AC · Clean' },
@@ -89,7 +89,7 @@ export default function About() {
             {/* Mini stats */}
             <div className="grid grid-cols-3 gap-4">
               {[
-                { icon: Car, label: '8 Cars', sub: 'Hatch·Sedan·MPV' },
+                { icon: Car, label: '500+ Cars', sub: 'Still Expanding' },
                 { icon: Leaf, label: 'CNG + PTR', sub: 'Eco Friendly' },
                 { icon: Award, label: '5★ Service', sub: 'Top Rated' },
               ].map(({ icon: Icon, label, sub }) => (

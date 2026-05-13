@@ -67,7 +67,7 @@ export default function Hero() {
             </motion.h1>
 
             <motion.div custom={3} variants={fadeUp} initial="hidden" animate="show" className="mb-6">
-              <div className="font-display text-3xl sm:text-4xl text-amber-500 leading-none tracking-widest">8 CARS. ONE CALL.</div>
+              <div className="font-display text-3xl sm:text-4xl text-amber-500 leading-none tracking-widest">500+ CARS. ONE CALL.</div>
               <div className="font-heading font-semibold text-sm tracking-[0.3em] text-steel-400 uppercase mt-1">
                 CNG + PETROL · ALL AC · ALL BANGALORE
               </div>

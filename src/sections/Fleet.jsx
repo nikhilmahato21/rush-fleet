@@ -108,7 +108,7 @@ export default function Fleet() {
             <Leaf size={18} className="text-green-600" />
             <div>
               <div className="font-display text-2xl text-green-700 leading-none">CNG + PETROL</div>
-              <div className="font-heading text-[10px] tracking-[0.3em] text-green-600/70 uppercase">All 8 Cars</div>
+              <div className="font-heading text-[10px] tracking-[0.3em] text-green-600/70 uppercase">500+ & Still Expanding</div>
             </div>
           </motion.div>
         </div>

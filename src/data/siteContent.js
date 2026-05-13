@@ -160,13 +160,13 @@ export const siteContent = {
     headline: 'BUILT ON TRUST. DRIVEN BY SERVICE.',
     story: 'Rush Fleet was born in Bangalore with a simple idea — give every customer access to a clean, modern, fuel-efficient car without the premium price tag. Operating from Vijaynagar and Nagarbhavi, we serve thousands of Bangaloreans every month.',
     points: [
-      'Fleet of 8 cars — hatchbacks, sedans, and MPVs for every need',
+      'Fleet of 500+ cars — hatchbacks, sedans, and MPVs for every need',
       'All vehicles run on CNG + Petrol for better fuel economy',
       'Professional, police-verified, and licensed drivers',
       'Transparent pricing with zero hidden charges',
     ],
     highlight: 'CNG + PETROL FLEET',
-    highlightSub: '8 Cars · All AC · Eco-Friendly · Reliable',
+    highlightSub: '500+ Cars · All AC · Eco-Friendly · Still Expanding',
   },
 
   testimonials: [
@@ -207,7 +207,7 @@ export const siteContent = {
     },
     {
       q: 'Which vehicles do you have?',
-      a: 'We have 8 cars: Maruti Suzuki Eresso, Wagon R, Dzire, and Ertiga; Hyundai Aura and Prime SD; Tata Xpress; and Kia Carens. All AC and CNG + Petrol.',
+      a: 'We have 500+ cars and still expanding: Maruti Suzuki Eresso, Wagon R, Dzire, and Ertiga; Hyundai Aura and Prime SD; Tata Xpress; Kia Carens, and more. All AC and CNG + Petrol.',
     },
     {
       q: 'Are all your cars CNG?',
