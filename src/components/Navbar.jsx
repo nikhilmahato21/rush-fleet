@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Phone, Menu, X, Car } from 'lucide-react'
+import { Phone, Menu, X, Car, Paperclip } from 'lucide-react'
 import { siteContent } from '../data/siteContent'
 
 const navLinks = [
@@ -83,6 +83,18 @@ export default function Navbar() {
 
             <div className="hidden md:flex items-center gap-3">
               <a
+                href={`https://wa.me/${siteContent.brand.whatsapp}?text=Hi, I want to attach my car to Rush Fleet`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 font-heading font-bold text-sm tracking-widest uppercase px-5 py-2.5 rounded-xl
+                           bg-green-500/20 backdrop-blur-sm border border-green-500/50 text-green-700
+                           shadow-sm shadow-green-300/30
+                           transition-all duration-200 hover:-translate-y-0.5 hover:bg-green-500/30 hover:border-green-500 hover:shadow-md hover:shadow-green-300/40"
+              >
+                <Paperclip size={15} strokeWidth={2.5} />
+                Attach Your Car
+              </a>
+              <a
                 href={`https://wa.me/${siteContent.brand.whatsapp}?text=Hi, I am interested in joining Rush Fleet as a driver`}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -104,13 +116,26 @@ export default function Navbar() {
               </a>
             </div>
 
-            <button
-              onClick={() => setMenuOpen(!menuOpen)}
-              className="md:hidden p-2 text-steel-950 focus:outline-none focus:ring-2 focus:ring-amber-500"
-              aria-label={menuOpen ? 'Close menu' : 'Open menu'}
-            >
-              {menuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
+            <div className="flex md:hidden items-center gap-2">
+              <a
+                href={`https://wa.me/${siteContent.brand.whatsapp}?text=Hi, I want to attach my car to Rush Fleet`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 font-heading font-bold text-xs tracking-widest uppercase px-3 py-2 rounded-lg
+                           bg-green-500/20 border border-green-500/50 text-green-700
+                           transition-all duration-200 active:bg-green-500/30"
+              >
+                <Paperclip size={13} strokeWidth={2.5} />
+                Attach Your Car
+              </a>
+              <button
+                onClick={() => setMenuOpen(!menuOpen)}
+                className="p-2 text-steel-950 focus:outline-none focus:ring-2 focus:ring-amber-500"
+                aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+              >
+                {menuOpen ? <X size={24} /> : <Menu size={24} />}
+              </button>
+            </div>
           </div>
         </div>
       </motion.nav>
@@ -138,6 +163,15 @@ export default function Navbar() {
                 </motion.button>
               ))}
               <div className="pt-4 space-y-3">
+                <a
+                  href={`https://wa.me/${siteContent.brand.whatsapp}?text=Hi, I want to attach my car to Rush Fleet`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 w-full bg-green-500/20 backdrop-blur-sm border border-green-500/50 text-green-700 font-heading font-bold tracking-widest uppercase py-3 px-4 rounded-xl hover:bg-green-500/30 hover:border-green-500 transition-all duration-200"
+                >
+                  <Paperclip size={16} strokeWidth={2.5} />
+                  Attach Your Car
+                </a>
                 <a
                   href={`https://wa.me/${siteContent.brand.whatsapp}?text=Hi, I am interested in joining Rush Fleet as a driver`}
                   target="_blank"
